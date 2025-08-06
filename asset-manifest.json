@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/My-Portfolio-apple-theme/static/css/main.f1796fef.css",
+    "main.js": "/My-Portfolio-apple-theme/static/js/main.43453c57.js",
+    "index.html": "/My-Portfolio-apple-theme/index.html",
+    "main.f1796fef.css.map": "/My-Portfolio-apple-theme/static/css/main.f1796fef.css.map",
+    "main.43453c57.js.map": "/My-Portfolio-apple-theme/static/js/main.43453c57.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f1796fef.css",
+    "static/js/main.43453c57.js"
+  ]
+}
