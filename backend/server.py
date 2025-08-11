@@ -1,75 +1,74 @@
-from fastapi import FastAPI, APIRouter
+# backend/server.py
+from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
+from pydantic import BaseModel, EmailStr, Field
 from dotenv import load_dotenv
-from starlette.middleware.cors import CORSMiddleware
 from motor.motor_asyncio import AsyncIOMotorClient
-import os
-import logging
 from pathlib import Path
-from pydantic import BaseModel, Field
-from typing import List
-import uuid
 from datetime import datetime
-
+import os, smtplib
+from email.mime.text import MIMEText
 
 ROOT_DIR = Path(__file__).parent
-load_dotenv(ROOT_DIR / '.env')
+load_dotenv(ROOT_DIR / ".env")
 
-# MongoDB connection
-mongo_url = os.environ['MONGO_URL']
-client = AsyncIOMotorClient(mongo_url)
-db = client[os.environ['DB_NAME']]
+MONGO_URL = os.getenv("MONGO_URL", "mongodb://localhost:27017")
+DB_NAME = os.getenv("DB_NAME", "test_database")
 
-# Create the main app without a prefix
+SMTP_HOST = os.getenv("SMTP_HOST")
+SMTP_PORT = int(os.getenv("SMTP_PORT", "587"))
+SMTP_USER = os.getenv("SMTP_USER")
+SMTP_PASS = os.getenv("SMTP_PASS")
+TO_EMAIL  = os.getenv("TO_EMAIL")   # where you want to receive contact messages
+
 app = FastAPI()
 
-# Create a router with the /api prefix
-api_router = APIRouter(prefix="/api")
-
-
-# Define Models
-class StatusCheck(BaseModel):
-    id: str = Field(default_factory=lambda: str(uuid.uuid4()))
-    client_name: str
-    timestamp: datetime = Field(default_factory=datetime.utcnow)
-
-class StatusCheckCreate(BaseModel):
-    client_name: str
-
-# Add your routes to the router instead of directly to app
-@api_router.get("/")
-async def root():
-    return {"message": "Hello World"}
-
-@api_router.post("/status", response_model=StatusCheck)
-async def create_status_check(input: StatusCheckCreate):
-    status_dict = input.dict()
-    status_obj = StatusCheck(**status_dict)
-    _ = await db.status_checks.insert_one(status_obj.dict())
-    return status_obj
-
-@api_router.get("/status", response_model=List[StatusCheck])
-async def get_status_checks():
-    status_checks = await db.status_checks.find().to_list(1000)
-    return [StatusCheck(**status_check) for status_check in status_checks]
-
-# Include the router in the main app
-app.include_router(api_router)
-
+# CORS for your frontend
+FRONTEND_ORIGIN = os.getenv("FRONTEND_ORIGIN", "*")
 app.add_middleware(
     CORSMiddleware,
+    allow_origins=[FRONTEND_ORIGIN] if FRONTEND_ORIGIN != "*" else ["*"],
     allow_credentials=True,
-    allow_origins=["*"],
     allow_methods=["*"],
     allow_headers=["*"],
 )
 
-# Configure logging
-logging.basicConfig(
-    level=logging.INFO,
-    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
-)
-logger = logging.getLogger(__name__)
+client = AsyncIOMotorClient(MONGO_URL)
+db = client[DB_NAME]
 
-@app.on_event("shutdown")
-async def shutdown_db_client():
-    client.close()
+class ContactMessage(BaseModel):
+    name: str = Field(..., min_length=1, max_length=200)
+    email: EmailStr
+    company: str | None = ""
+    subject: str = Field(..., min_length=1, max_length=200)
+    message: str = Field(..., min_length=1, max_length=5000)
+
+def send_email(msg: ContactMessage):
+    if not all([SMTP_HOST, SMTP_USER, SMTP_PASS, TO_EMAIL]):
+        # Skip silently if email creds not set
+        return
+    body = (
+        f"New portfolio inquiry\n\n"
+        f"Name: {msg.name}\n"
+        f"Email: {msg.email}\n"
+        f"Company: {msg.company}\n"
+        f"Subject: {msg.subject}\n\n"
+        f"{msg.message}\n"
+        f"\nSent at: {datetime.utcnow().isoformat()}Z"
+    )
+    mime = MIMEText(body)
+    mime["Subject"] = f"[Portfolio] {msg.subject}"
+    mime["From"] = SMTP_USER
+    mime["To"] = TO_EMAIL
+
+    with smtplib.SMTP(SMTP_HOST, SMTP_PORT) as s:
+        s.starttls()
+        s.login(SMTP_USER, SMTP_PASS)
+        s.send_message(mime)
+
+@app.post("/api/contact")
+async def create_contact(payload: ContactMessage):
+    doc = payload.model_dump() | {"created_at": datetime.utcnow()}
+    await db.contact_messages.insert_one(doc)
+    send_email(payload)
+    return {"ok": True}
