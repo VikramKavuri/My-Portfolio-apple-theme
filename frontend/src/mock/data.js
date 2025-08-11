@@ -91,7 +91,7 @@ export const mockTestimonials = [
     role: "Senior Data Manager",
     company: "Accenture",
     content: "Thrivikrama's expertise in data pipeline optimization is exceptional. He reduced our processing time by 50% and delivered comprehensive dashboards that transformed our decision-making process.",
-    avatar: "https://images.unsplash.com/photo-1494790108755-2616b612b789?w=100&h=100&fit=crop&crop=faces",
+    avatar: "Ruchika.jpg  ",
     rating: 5,
     linkedIn: "#"
   },
@@ -101,7 +101,7 @@ export const mockTestimonials = [
     role: "Technical Lead",
     company: "The Arc Erie County",
     content: "Outstanding work on our enterprise data integration project. Thrivikrama's attention to detail and technical skills in PowerShell and Python automation saved us countless hours.",
-    avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=faces",
+    avatar: "Subhashree.jpg",
     rating: 5,
     linkedIn: "#"
   },
