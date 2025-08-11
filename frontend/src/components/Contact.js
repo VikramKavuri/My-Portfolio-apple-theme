@@ -4,9 +4,9 @@ import { mockContactInfo } from '../mock/data';
 import { useToast } from '../hooks/use-toast';
 import emailjs from '@emailjs/browser';
 
-useEffect(() => {
-  emailjs.init('MWOQU85H3KnQNh3SP');
-}, []);
+// useEffect(() => {
+//   emailjs.init('MWOQU85H3KnQNh3SP');
+// }, []);
 
 const Contact = () => {
   const [formData, setFormData] = useState({
