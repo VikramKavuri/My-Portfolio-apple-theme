@@ -47,7 +47,12 @@ emailjs. send(
     toast({
       title: "Message Sent Successfully!",
       description: "Thank you for reaching out. I'll get back to you within 24 hours.",
-    });
+    })
+  .catch((error) => {
+  console.log('DETAILED ERROR:', error); // ← Add this line
+  console.log('Error text:', error.text); // ← And this line
+  // Your error message
+});
     setFormData({ name: '', email: '', company: '', subject: '', message: '' });
   })
   .catch((error) => {
