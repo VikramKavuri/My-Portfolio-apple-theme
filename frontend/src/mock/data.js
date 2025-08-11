@@ -1,7 +1,7 @@
 // Mock data for the portfolio - this will be replaced with backend integration later
 // At the top of your testimonials component or data file
-import RuchikaAvatar from 'My-Portfolio-apple-theme/frontend/src/Ruchika.jpg';
-import SubhashreeAvatar from 'My-Portfolio-apple-theme/frontend/src/Subhashree.jpg';
+import RuchikaAvatar from './Ruchika.jpg';
+import SubhashreeAvatar from './Subhashree.jpg';
 
 export const mockSkills = {
   technical: [
@@ -94,7 +94,7 @@ export const mockTestimonials = [
     role: "Senior Data Manager",
     company: "Accenture",
     content: "Thrivikrama's expertise in data pipeline optimization is exceptional. He reduced our processing time by 50% and delivered comprehensive dashboards that transformed our decision-making process.",
-    avatar: "RuchikaAvatar",
+    avatar: RuchikaAvatar,
     rating: 5,
     linkedIn: "#"
   },
@@ -104,7 +104,7 @@ export const mockTestimonials = [
     role: "Technical Lead",
     company: "The Arc Erie County",
     content: "Outstanding work on our enterprise data integration project. Thrivikrama's attention to detail and technical skills in PowerShell and Python automation saved us countless hours.",
-    avatar: "SubhashreeAvatar",
+    avatar: SubhashreeAvatar,
     rating: 5,
     linkedIn: "#"
   },
@@ -114,7 +114,7 @@ export const mockTestimonials = [
     role: "Healthcare Analytics Director",
     company: "SRIT Pvt Ltd",
     content: "Thrivikrama's analytical skills and ability to work with complex healthcare data sets are remarkable. His clustering analysis helped us identify high-risk patient cohorts effectively.",
-    avatar: "https://images.unsplash.com/photo-1559628233-7f4d0b5c1d74?w=100&h=100&fit=crop&crop=faces",
+    avatar: SubhashreeAvatar,
     rating: 5,
     linkedIn: "#"
   },
@@ -124,7 +124,7 @@ export const mockTestimonials = [
     role: "DevOps Engineer",
     company: "Accenture",
     content: "Collaborative and highly skilled professional. Thrivikrama's work on CI/CD workflows using Azure DevOps was instrumental in achieving our 70% reduction in manual tasks.",
-    avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=faces",
+    avatar: SubhashreeAvatar,
     rating: 5,
     linkedIn: "#"
   }
