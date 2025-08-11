@@ -4,6 +4,10 @@ import { mockContactInfo } from '../mock/data';
 import { useToast } from '../hooks/use-toast';
 import emailjs from 'emailjs-com';
 
+useEffect(() => {
+  emailjs.init('MWOQU85H3KnQNh3SP');
+}, []);
+
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -27,7 +31,7 @@ const handleSubmit = async (e) => {
   e.preventDefault();
   setIsSubmitting(true);
 
-  emailjs.send(
+emailjs. send(
     'service_6ahvylx',
     'template_gqls6i4',
     {
@@ -37,9 +41,8 @@ const handleSubmit = async (e) => {
       subject: formData.subject,
       message: formData.message,
       to_email: 'thrivikr@buffalo.edu'
-    },
-    'MWOQU85H3KnQNh3SP'
-  )
+    }
+)
   .then(() => {
     toast({
       title: "Message Sent Successfully!",
