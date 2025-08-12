@@ -29,54 +29,51 @@ const Contact = () => {
   };
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
-    setIsSubmitting(true);
+  e.preventDefault();
+  setIsSubmitting(true);
 
-    try {
-      const response = await emailjs.send(
-        'service_6ahvylx',           // ← Fixed: removed escaped underscore
-        'template_gqls6i4',          // ← Fixed: removed escaped underscore
-        {
-          from_name: formData.name,
-          from_email: formData.email,
-          company: formData.company,
-          subject: formData.subject,
-          message: formData.message,
-          to_email: 'thrivikr@buffalo.edu'
-        }
-      );
+  try {
+    const response = await emailjs.send(
+      'service_6ahvylx',
+      'template_gqls6i4',
+      {
+        from_name: formData.name,
+        from_email: formData.email,
+        company: formData.company,
+        subject: formData.subject,
+        message: formData.message,
+        to_email: 'thrivikr@buffalo.edu'
+      },
+      {
+        publicKey: 'MWOQU85H3KnQNh3SP'  // ← Add this as 4th parameter
+      }
+    );
 
-      // Success - detailed logging
-      console.log('✅ EmailJS SUCCESS:', response.status, response.text);
-      
-      toast({
-        title: "Message Sent Successfully!",
-        description: "Thank you for reaching out. I'll get back to you within 24 hours.",
-      });
+    console.log('✅ EmailJS SUCCESS:', response.status, response.text);
+    
+    toast({
+      title: "Message Sent Successfully!",
+      description: "Thank you for reaching out. I'll get back to you within 24 hours.",
+    });
 
-      // Clear form
-      setFormData({ 
-        name: '', 
-        email: '', 
-        company: '', 
-        subject: '', 
-        message: '' 
-      });
+    setFormData({ 
+      name: '', 
+      email: '', 
+      company: '', 
+      subject: '', 
+      message: '' 
+    });
 
-    } catch (error) {
-      // Error - detailed logging for debugging
-      console.error('❌ EmailJS DETAILED ERROR:', error);
-      console.error('Error status:', error.status);
-      console.error('Error text:', error.text);
-      console.error('Full error object:', JSON.stringify(error, null, 2));
-      
-      toast({
-        title: "Message Failed",
-        description: "There was an error sending your message. Please try again later.",
-      });
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
+  } catch (error) {
+    console.error('❌ EmailJS DETAILED ERROR:', error);
+    
+    toast({
+      title: "Message Failed",
+      description: "There was an error sending your message. Please try again later.",
+    });
+  } finally {
+    setIsSubmitting(false);
+  }
+};
 
   // ... rest of your component code remains the same
