@@ -16,9 +16,9 @@ const Contact = () => {
   const { toast } = useToast();
 
   // Initialize EmailJS
-  useEffect(() => {
-    emailjs.init('MWOQU85H3KnQNh3SP');
-  }, []);
+  // useEffect(() => {
+  //   emailjs.init('MWOQU85H3KnQNh3SP');
+  // }, []);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
