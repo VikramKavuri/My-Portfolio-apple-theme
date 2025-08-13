@@ -56,7 +56,7 @@ export const mockSkills = {
           name: "Python",
           level: 95,
           iconType: "image",
-          iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+          iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg"
         },
         {
           name: "SQL",
@@ -109,7 +109,7 @@ export const mockSkills = {
           name: "Databricks",
           level: 80,
           iconType: "image",
-          icon: "https://upload.wikimedia.org/wikipedia/commons/6/63/Databricks_Logo.png"
+          icon: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRk55thBB29oWmkALZ9-rQUxrJw5tBp51KNw&s"
         },
         {
           name: "Snowflake",
