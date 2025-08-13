@@ -56,7 +56,7 @@ export const mockSkills = {
           name: "Python",
           level: 95,
           iconType: "image",
-          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+          iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
         },
         {
           name: "SQL",
