@@ -3,193 +3,193 @@
 import RuchikaAvatar from './Ruchika.jpg';
 import SubhashreeAvatar from './Subhashree.jpg';
 
-export const mockSkills = {
-  technical: [
-    {
-      category: "Programming Languages",
-      skills: [
-        { name: "Python", level: 95, icon: "🐍" },
-        { name: "SQL", level: 90, icon: "🔍" },
-        { name: "PySpark", level: 85, icon: "⚡" },
-        { name: "PowerShell", level: 80, icon: "💻" },
-        { name: "R", level: 75, icon: "📊" },
-        { name: "Java", level: 70, icon: "☕" }
-      ]
-    },
-    {
-      category: "Cloud Platforms",
-      skills: [
-        { name: "AWS", level: 90, icon: "☁️" },
-        { name: "Azure", level: 85, icon: "🌐" },
-        { name: "Databricks", level: 80, icon: "🔥" },
-        { name: "Snowflake", level: 85, icon: "❄️" }
-      ]
-    },
-    {
-      category: "Data Tools & Technologies",
-      skills: [
-        { name: "Apache Airflow", level: 85, icon: "🌬️" },
-        { name: "Tableau", level: 90, icon: "📈" },
-        { name: "Power BI", level: 88, icon: "⚡" },
-        { name: "Apache Kafka", level: 80, icon: "🚀" },
-        { name: "Docker", level: 75, icon: "🐳" },
-        { name: "SSIS", level: 85, icon: "🔄" }
-      ]
-    },
-    {
-      category: "Databases",
-      skills: [
-        { name: "PostgreSQL", level: 90, icon: "🍃" },
-        { name: "Snowflake", level: 80, icon: "🍃" },
-        { name: "MySQL", level: 85, icon: "🗄️" },
-        { name: "MongoDB", level: 55, icon: "⚡" }
-      ]
-    }
-  ]
-};
 // export const mockSkills = {
 //   technical: [
 //     {
 //       category: "Programming Languages",
 //       skills: [
-//         {
-//           name: "Python",
-//           level: 95,
-//           iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg", level: 90
-//         },
-//         {
-//           name: "SQL",
-//           level: 90,
-//           iconType: "image",
-//           icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
-//         },
-//         {
-//           name: "PySpark",
-//           level: 85,
-//           iconType: "image",
-//           icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apachespark/apachespark-original.svg"
-//         },
-//         {
-//           name: "PowerShell",
-//           level: 80,
-//           iconType: "image",
-//           icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/powershell/powershell-original.svg"
-//         },
-//         {
-//           name: "R",
-//           level: 75,
-//           iconType: "image",
-//           icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/r/r-original.svg"
-//         },
-//         {
-//           name: "Java",
-//           level: 70,
-//           iconType: "image",
-//           icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"
-//         }
+//         { name: "Python", level: 95, icon: "🐍" },
+//         { name: "SQL", level: 90, icon: "🔍" },
+//         { name: "PySpark", level: 85, icon: "⚡" },
+//         { name: "PowerShell", level: 80, icon: "💻" },
+//         { name: "R", level: 75, icon: "📊" },
+//         { name: "Java", level: 70, icon: "☕" }
 //       ]
 //     },
 //     {
 //       category: "Cloud Platforms",
 //       skills: [
-//         {
-//           name: "AWS",
-//           level: 90,
-//           iconType: "image",
-//           icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg"
-//         },
-//         {
-//           name: "Azure",
-//           level: 85,
-//           iconType: "image",
-//           icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg"
-//         },
-//         {
-//           name: "Databricks",
-//           level: 80,
-//           iconType: "image",
-//           icon: "https://upload.wikimedia.org/wikipedia/commons/4/4b/Databricks_Logo.png"
-//         },
-//         {
-//           name: "Snowflake",
-//           level: 85,
-//           iconType: "image",
-//           icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Snowflake_Logo.svg/512px-Snowflake_Logo.svg.png"
-//         }
+//         { name: "AWS", level: 90, icon: "☁️" },
+//         { name: "Azure", level: 85, icon: "🌐" },
+//         { name: "Databricks", level: 80, icon: "🔥" },
+//         { name: "Snowflake", level: 85, icon: "❄️" }
 //       ]
 //     },
 //     {
 //       category: "Data Tools & Technologies",
 //       skills: [
-//         {
-//           name: "Apache Airflow",
-//           level: 85,
-//           iconType: "image",
-//           icon: "https://techicons.dev/icons/apacheairflow.svg"
-//         },
-//         {
-//           name: "Tableau",
-//           level: 90,
-//           iconType: "image",
-//           icon: "https://cdn.worldvectorlogo.com/logos/tableau-software.svg"
-//         },
-//         {
-//           name: "Power BI",
-//           level: 88,
-//           iconType: "image",
-//           icon: "https://upload.wikimedia.org/wikipedia/commons/c/cf/New_Power_BI_Logo.svg"
-//         },
-//         {
-//           name: "Apache Kafka",
-//           level: 80,
-//           iconType: "image",
-//           icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apachekafka/apachekafka-original.svg"
-//         },
-//         {
-//           name: "Docker",
-//           level: 75,
-//           iconType: "image",
-//           icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"
-//         },
-//         {
-//           name: "SSIS",
-//           level: 85,
-//           iconType: "image",
-//           icon: "https://upload.wikimedia.org/wikipedia/commons/4/4e/Microsoft_SQL_Server_Integration_Services_Logo.png"
-//         }
+//         { name: "Apache Airflow", level: 85, icon: "🌬️" },
+//         { name: "Tableau", level: 90, icon: "📈" },
+//         { name: "Power BI", level: 88, icon: "⚡" },
+//         { name: "Apache Kafka", level: 80, icon: "🚀" },
+//         { name: "Docker", level: 75, icon: "🐳" },
+//         { name: "SSIS", level: 85, icon: "🔄" }
 //       ]
 //     },
 //     {
 //       category: "Databases",
 //       skills: [
-//         {
-//           name: "PostgreSQL",
-//           level: 90,
-//           iconType: "image",
-//           icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
-//         },
-//         {
-//           name: "Snowflake",
-//           level: 80,
-//           iconType: "image",
-//           icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Snowflake_Logo.svg/512px-Snowflake_Logo.svg.png"
-//         },
-//         {
-//           name: "MySQL",
-//           level: 85,
-//           iconType: "image",
-//           icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
-//         },
-//         {
-//           name: "MongoDB",
-//           level: 55,
-//           iconType: "image",
-//           icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
-//         }
+//         { name: "PostgreSQL", level: 90, icon: "🍃" },
+//         { name: "Snowflake", level: 80, icon: "🍃" },
+//         { name: "MySQL", level: 85, icon: "🗄️" },
+//         { name: "MongoDB", level: 55, icon: "⚡" }
 //       ]
 //     }
 //   ]
 // };
+export const mockSkills = {
+  technical: [
+    {
+      category: "Programming Languages",
+      skills: [
+        {
+          name: "Python",
+          level: 95,
+          iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg", level: 90
+        },
+        {
+          name: "SQL",
+          level: 90,
+          iconType: "image",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
+        },
+        {
+          name: "PySpark",
+          level: 85,
+          iconType: "image",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apachespark/apachespark-original.svg"
+        },
+        {
+          name: "PowerShell",
+          level: 80,
+          iconType: "image",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/powershell/powershell-original.svg"
+        },
+        {
+          name: "R",
+          level: 75,
+          iconType: "image",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/r/r-original.svg"
+        },
+        {
+          name: "Java",
+          level: 70,
+          iconType: "image",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"
+        }
+      ]
+    },
+    {
+      category: "Cloud Platforms",
+      skills: [
+        {
+          name: "AWS",
+          level: 90,
+          iconType: "image",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg"
+        },
+        {
+          name: "Azure",
+          level: 85,
+          iconType: "image",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg"
+        },
+        {
+          name: "Databricks",
+          level: 80,
+          iconType: "image",
+          icon: "https://upload.wikimedia.org/wikipedia/commons/4/4b/Databricks_Logo.png"
+        },
+        {
+          name: "Snowflake",
+          level: 85,
+          iconType: "image",
+          icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Snowflake_Logo.svg/512px-Snowflake_Logo.svg.png"
+        }
+      ]
+    },
+    {
+      category: "Data Tools & Technologies",
+      skills: [
+        {
+          name: "Apache Airflow",
+          level: 85,
+          iconType: "image",
+          icon: "https://techicons.dev/icons/apacheairflow.svg"
+        },
+        {
+          name: "Tableau",
+          level: 90,
+          iconType: "image",
+          icon: "https://cdn.worldvectorlogo.com/logos/tableau-software.svg"
+        },
+        {
+          name: "Power BI",
+          level: 88,
+          iconType: "image",
+          icon: "https://upload.wikimedia.org/wikipedia/commons/c/cf/New_Power_BI_Logo.svg"
+        },
+        {
+          name: "Apache Kafka",
+          level: 80,
+          iconType: "image",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apachekafka/apachekafka-original.svg"
+        },
+        {
+          name: "Docker",
+          level: 75,
+          iconType: "image",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"
+        },
+        {
+          name: "SSIS",
+          level: 85,
+          iconType: "image",
+          icon: "https://upload.wikimedia.org/wikipedia/commons/4/4e/Microsoft_SQL_Server_Integration_Services_Logo.png"
+        }
+      ]
+    },
+    {
+      category: "Databases",
+      skills: [
+        {
+          name: "PostgreSQL",
+          level: 90,
+          iconType: "image",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
+        },
+        {
+          name: "Snowflake",
+          level: 80,
+          iconType: "image",
+          icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Snowflake_Logo.svg/512px-Snowflake_Logo.svg.png"
+        },
+        {
+          name: "MySQL",
+          level: 85,
+          iconType: "image",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
+        },
+        {
+          name: "MongoDB",
+          level: 55,
+          iconType: "image",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
+        }
+      ]
+    }
+  ]
+};
 
 
 export const mockCertifications = [
