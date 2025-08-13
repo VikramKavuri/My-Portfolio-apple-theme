@@ -55,7 +55,8 @@ export const mockSkills = {
         {
           name: "Python",
           level: 95,
-          iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg", level: 90
+          iconType: "image",
+          iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
         },
         {
           name: "SQL",
@@ -96,7 +97,7 @@ export const mockSkills = {
           name: "AWS",
           level: 90,
           iconType: "image",
-          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg"
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg"
         },
         {
           name: "Azure",
@@ -108,13 +109,13 @@ export const mockSkills = {
           name: "Databricks",
           level: 80,
           iconType: "image",
-          icon: "https://upload.wikimedia.org/wikipedia/commons/4/4b/Databricks_Logo.png"
+          icon: "https://upload.wikimedia.org/wikipedia/commons/6/63/Databricks_Logo.png"
         },
         {
           name: "Snowflake",
           level: 85,
           iconType: "image",
-          icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Snowflake_Logo.svg/512px-Snowflake_Logo.svg.png"
+          icon: "https://www.svgheart.com/wp-content/uploads/2021/11/snowflakes-christmas-winter-season-free-svg-file-SvgHeart.Com.png"
         }
       ]
     },
@@ -125,7 +126,7 @@ export const mockSkills = {
           name: "Apache Airflow",
           level: 85,
           iconType: "image",
-          icon: "https://techicons.dev/icons/apacheairflow.svg"
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/apacheairflow/apacheairflow-original.svg"
         },
         {
           name: "Tableau",
@@ -155,7 +156,7 @@ export const mockSkills = {
           name: "SSIS",
           level: 85,
           iconType: "image",
-          icon: "https://upload.wikimedia.org/wikipedia/commons/4/4e/Microsoft_SQL_Server_Integration_Services_Logo.png"
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/microsoftsqlserver/microsoftsqlserver-original.svg"
         }
       ]
     },
@@ -172,7 +173,7 @@ export const mockSkills = {
           name: "Snowflake",
           level: 80,
           iconType: "image",
-          icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Snowflake_Logo.svg/512px-Snowflake_Logo.svg.png"
+          icon: "https://www.svgheart.com/wp-content/uploads/2021/11/snowflakes-christmas-winter-season-free-svg-file-SvgHeart.Com.png"
         },
         {
           name: "MySQL",
