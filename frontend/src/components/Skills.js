@@ -100,7 +100,13 @@ const Skills = () => {
                 >
                   <div className="flex items-center justify-between mb-4">
                     <div className="flex items-center">
-                      <div className="text-2xl mr-3">{skill.icon}</div>
+                      <div className="text-2xl mr-3">
+{skill.iconType === 'image' ? (
+  <img src={skill.icon} alt={skill.name} className="w-8 h-8 mr-2" />
+) : (
+  <span className="text-xl mr-2">{skill.icon}</span>
+)}
+</div>
                       <h3 className="text-lg font-semibold text-gray-900">{skill.name}</h3>
                     </div>
                     <div className="text-sm font-medium text-gray-500">{skill.level}%</div>
