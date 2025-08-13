@@ -39,7 +39,7 @@ export const mockSkills = {
     {
       category: "Databases",
       skills: [
-        { name: "PostgreSQL", level: 90, iconType="image", icon: "https://img.favpng.com/7/5/11/postgresql-logo-computer-software-database-png-favpng-VzwjvpxaDys6FnN0apYZJbGV7.jpg" },
+        { name: "PostgreSQL", level: 90, icon: "🍃" },
         { name: "Snowflake", level: 80, icon: "🍃" },
         { name: "MySQL", level: 85, icon: "🗄️" },
         { name: "MongoDB", level: 55, icon: "⚡" }
